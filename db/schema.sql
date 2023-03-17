@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS yullcake_db;
+CREATE DATABASE yullcake_db;
