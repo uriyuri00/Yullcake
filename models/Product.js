@@ -50,4 +50,4 @@ Product.init(
   }
 );
 
-module.exports = Post;
+module.exports = Product;
