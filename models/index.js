@@ -5,7 +5,7 @@ const Product = require('./Product');
 const Inventory = require('./Inventory');
 
 
-User.hasone(Inventory, {
+User.hasOne(Inventory, {
   foreignKey: 'user_id',
   onDelete: 'CASCADE'
 });

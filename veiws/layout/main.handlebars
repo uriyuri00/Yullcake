@@ -12,6 +12,44 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <header>
+        <div>
+            <img src="./img/weddingcake" alt="cake picture">
+            <br>
+
+            <nav class="navbar navbar-expand-sm" id="nav-background">
+                    <div class="mx-auto d-sm-flex d-block flex-sm-nowrap">
+                        <div class="collapse navbar-collapse text-center">
+                            <ul class="navbar-nav">
+                                <!-- Conditionally render login or logout links -->
+                                {{#if loggedIn}}
+                                <a class="nav-link" href="/">Home</a>
+                                <a class="nav-link" href="/api/users/logout" id="logout">Logout</a>
+                                {{else}}
+                                {{!-- <a class="nav-link" href="#">Home</a> --}}
+                                <a class="nav-link signup-nav" href="/signup">Signup</a>
+                                <a class="nav-link login-nav" href="/login">Login</a>
+                                {{/if}}
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+        </div>
+    </header>
+
+    <main class="main-container">
+            {{{ body }}}
+    </main>
+        <br>
+
+        {{#if loggedIn}}
+        {{!-- <p id="inventory-link">Go to your <a href="/users/inventory" class="inv-link">Liquor
+                Cabinet</a> </p> --}}
+
+        <script src="/js/logout.js"></script>
+        {{/if}}
+        </div>
 </body>
 </html>
+
+https://gist.github.com/uriyuri00/0a0ccb5c3503a7b980a1cce4485dbab6/revisions
